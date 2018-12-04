@@ -1,0 +1,10 @@
+<!-- 데이터베이스를 사용하기 위한 xml파일 -->
+<!-- http://hajubal.blogspot.com/2017/01/tomcat-contextxml.html 참고 -->
+<Context>
+	<Resource name="jdbc/OracleDB" auth="Container"
+		type="javax.sql.DataSource" username="USER2" password="1234"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+		url="jdbc:oracle:thin:@localhost:1521:xe" maxActive="500"
+		maxIdle="100" />
+</Context>
