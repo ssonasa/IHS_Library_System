@@ -24,8 +24,26 @@
 				%>
 			</td>
 		</tr>
-		<tr>
-			<td>
+	</table>
+
+	<form name="searchForm" action="search.lib">
+		<table>
+			<tr>
+				<td><select name="opt">
+						<option value="0">제목</option>
+						<option value="1">내용</option>
+						<option value="2">제목+내용</option>
+						<option value="3">글쓴이</option>
+				</select> <input type="text" size="20" name="searchForm">&nbsp;<input
+					type="submit" value="검색"></td>
+			</tr>
+		</table>
+	</form>
+	<tr>
+		<td><a href="notices.lib">공지사항</a>&nbsp;&nbsp;&nbsp;<a
+			href="reviews.lib">후기</a> &nbsp;&nbsp;&nbsp;<a href="qnas.lib">QnA
+				/ 구매요청</a></td>
+	</tr>
 	</table>
 </body>
 </html>
