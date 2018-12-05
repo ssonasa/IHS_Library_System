@@ -16,10 +16,10 @@ import action.MemberLoginAction;
 import vo.ActionForward;
 
 @WebServlet("*.lib")
-public class MemberController extends HttpServlet {
+public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public MemberController() {
+	public Controller() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class MemberController extends HttpServlet {
 		String command = RequestURI.substring(contextPath.length());
 		ActionForward forward = null;
 		Action action = null;
-
+System.out.println(command);
 		if (command.equals("/memberJoinAction.lib")) {
 			action = new MemberJoinAction();
 			try {
@@ -58,6 +58,8 @@ public class MemberController extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.invalidate();
 			response.sendRedirect("./main.jsp");
+		} else if(command.equals("/insertBook.lib")) {
+			System.out.println("야호 성공이다");
 		}
 
 		if (forward != null) {
